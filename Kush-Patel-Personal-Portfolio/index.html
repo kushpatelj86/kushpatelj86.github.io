@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+
+
+<html>
+  <head>
+    <meta charset="UTF-8" >
+    <title>Kush Patel Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () 
+      {
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzAYrYUeLwj5xMAFVO0xjXNBiA687jnrNTgbQCYf5QIMu-U-lUlO2OPrQ3q0LUG9581/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const submitButton = form.querySelector('button[type="submit"]');
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+    
+          submitButton.disabled = true;
+    
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+              console.log('Success!', response);
+              form.reset(); 
+              submitButton.disabled = false; 
+            })
+            .catch(error => {
+              console.error('Error!', error.message);
+              submitButton.disabled = false; 
+            });
+        });
+      });
+    </script>
+    
+    
+    
+  </head>
+
+  <body>
+    <div id="header">
+      <nav class="chose">
+        <ul>
+          <li> <a href="#home">Home</a></li>
+          <li> <a href="#about">About Me</a></li>
+          <li> <a href="EighthEngineeringResume.pdf">Resume</a></li>
+          <li> <a href="#skills">Skills and Certifications</a></li>
+          <li> <a href="#experience">Experience</a></li>
+          <li> <a href="#education">Education</a></li>
+          <li> <a href="#projects">Projects</a></li>
+          <li> <a href="#contact">Contact</a></li>
+  
+        </ul>
+      </nav>
+  
+      <div id="home">
+        <header class="glow">
+          <h1 class="introduction">Hello, My Name is Kush Patel</h1>
+          <h2 class="whatami">Just a Average Developer </h2>
+          <h3 class="education">California State University, Fullerton </h3>
+          <h4 class="field">Barchelor's of Science, Computer Science </h4>
+
+          <p>Have experience coding in Web Development and Design, Cyber Security, and Software Engineering</p>
+          <img class="profilephoto" src="./images/Kush-Patel-User.JPG">
+        </header>
+      </div>
+    </div>
+
+
+    <div id="about">
+      <div class="bio">
+        <h1 class="about-head">About Me</h1>
+        <p class="about-paragraph">Currently a Computer Science Student at California State University Fullerton, in pursuit of an Internship or Entry Level Job, eager to learn Cyber Security, 
+          Web Development, and Software Engineering. I've always loved Computers and Technology. My Coding Journey Started during my Senior year of High School, when I took AP Computer Science and Game Development and Design, becuase of taking that class, it motivated me to 
+           continue to continue my Computer Science journey. I have taken so many web development and cyber security courses in my entire career. I've Coded so many Web Development and 
+           Cyber Security projects. I have participated in the CIC-PCUBED program as a reaserch assistant in pairs trading. I've worked various food and retail jobs in the past. I intend to apply all my tech skills in Computer Science in the future. In my free time like to go to the gym and workout, take and edit photos, film and produce videos,
+           participate in mixed martial art tornaments, and play pickleball </p>
+      </div>
+    </div>
+    
+
+
+
+
+    <div id="skills">
+      <div class="tabs">
+        <h1 class="skill-tab-head">Skills</h1>
+
+        <div class="skill-tab-titles">
+          <p class="skill-tab-link skill-active-link" onclick="showContents('languages')">Programming Languages</p>
+          <p class="skill-tab-link" onclick="showContents('frameworks')">Frameworks</p>
+          <p class="skill-tab-link" onclick="showContents('tools')">Tools</p>
+        </div>
+
+        <div class="skill-tab-contents skill-active-tab" id="languages">
+          <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>JavaScript</li>
+            <li>x86-64 Assembly Language</li>
+
+          </ul>
+        </div>
+
+        <div class="skill-tab-contents" id="frameworks">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+
+
+        <div class="skill-tab-contents" id="tools">
+          <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Visual Studio</li>
+            <li>Unity</li>
+            <li>Visual Studio Code</li>
+            <li>Linux</li>
+            <li>Windows</li>
+            <li>Bash</li>
+          </ul>
+        </div>
+        
+    </div>
+
+
+    <div id="experience">
+      <h1 class="experience-head">Experience</h1>
+        <div class="workexperiences">
+            <ul>
+              <li><span>CIC-PCUBED Researcher</span><br><br>May 2023 - July 2023 </li>
+              
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="education">
+      <h1 class="education-head">Education</h1>
+        <div class="schools">
+            <ul>
+              <li><span>California State University, Fullerton</span><br><br>August 2023 - December 2025 </li>
+              <li><span>Santiago Canyon College</span><br><br>Febuary 2020 - August 2023 </li>
+              <li><span>Fullerton College</span><br><br>September 2019 - May 2022 </li>
+              <li><span>Yorba Linda High School</span><br><br>August 2018 - June 2022 </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="projects">
+      <h1 class="project-head">Projects</h1>
+        <div class="projects-list">
+            <ul>
+              <li><span>FitFix</span><br><br>May 2024<br><br> <a href="https://github.com/kushpatelj86/CPSC-362-Group-Project-Workout-Website-.git">Click Here</a></li>
+              <li><span>Secure File Sharing System</span><br><br>May 2024<br><br> <a href="https://github.com/kushpatelj86/CPSC-352-Final-Project.git">Click Here</a></li>
+              <li><span>Weather Extension</span><br><br>February 2024<br><br> <a href="https://github.com/Fullyhacks2024/Fullyhacks_Project.git">Click Here</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div id="contact">
+      <h1 class="contact-head">Contacts</h1>
+      <div class="contact-row">
+        <div class="left-contact">
+          <h1 class="contact-sub-title">Contact me</h1>
+          <a href= "mailto: kushpatelj@gmail.com"> kushpatelj@gmail.com </a>
+
+          <div class="my-social-icons">
+            <a href="https://github.com/kushpatelj86"><i class="fab fa-github"></i>GitHub</a>
+            <a href="https://www.linkedin.com/in/kushpatelj/"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            <a href="https://www.youtube.com/@kushpatelj86"><i class="fab fa-youtube"></i>YouTube</a>
+          </div>
+        </div>
+
+
+        <div class="right-contact">
+
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+
+
+
+
+        </div>
+      </div>
+        
+
+    </div>
+
+
+
+
+
+    
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <p>© Kush Patel 2021-2024.    </p>
+  </footer>
+</html>

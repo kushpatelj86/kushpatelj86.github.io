@@ -1,0 +1,503 @@
+*{
+    background-color: black;
+}
+
+#header
+{
+    align-items: center;
+    text-align: center;
+}
+
+.glow{
+    color: rgb(57, 255, 20);
+    font-family: Georgia, serif;
+    text-shadow:
+    0 0 2px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 25px rgb(57, 255, 20),
+    0 0 60px rgb(57, 255, 20),
+    0 0 91px rgb(57, 255, 20),
+    0 0 131px rgb(57, 255, 20),
+    0 0 131px rgb(57, 255, 20);
+}
+
+.profilephoto {
+    display: block;
+    margin: 0 auto; /* This centers the image horizontally */
+    width: 50%;     /* You can adjust this percentage as needed */
+    height: auto;   /* Keep the aspect ratio of the image */
+}
+
+
+
+.chose {
+    z-index: 10000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+
+    
+}
+
+
+.chose ul {
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+.chose ul li {
+    align-items: center;
+    text-align: center;
+    margin : 20px 30px;
+    display: inline-block;
+    color: aquamarine;
+}
+
+
+.chose ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-family: system-ui;
+    display: inline-block;
+    position: relative;
+}
+
+.chose ul li a:after{
+    background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #0af8f8;
+  transition: width 1.3s ease 1s, left 1.3s ease 1s;
+  width: 0;
+
+}
+
+.chose ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+.glow{
+    padding-top: 170px;
+}
+
+
+
+
+
+.bio
+{
+    color: rgb(255, 251, 0);
+
+}
+
+#home {
+
+    padding-top: 120px;
+}
+
+.about-head{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.about-paragraph{
+    font-family: "Gill Sans Extrabold", sans-serif;
+
+}
+
+#about {
+    padding: 100px 0;
+    align-items: center;
+    text-align: center;
+}
+.introduction{
+    font-size: 60px;
+    font-weight: 70;
+}
+
+#skills {
+    padding: 100px 0;
+    align-items: center;
+    text-align: center;
+}
+
+footer
+{
+    padding: 100px 0;
+
+    color:chocolate;
+}
+
+footer p
+{
+
+    color:chocolate;
+}
+
+
+.skill-tab-head{
+    color:rgb(187, 105, 105);
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
+.skill-tab-titles{
+
+    text-align: center;
+    align-items: center;
+    display:flex;
+    justify-content: center; 
+}
+
+
+
+.skill-tab-link{
+    text-align: center;
+    align-items: center;
+    margin-right: 50px;
+    cursor : pointer;
+    position: relative;
+    color:rgb(154, 105, 187);
+   
+}
+
+.skill-tab-link::after{
+    content : '';
+    width : 0;
+    height : 4px;
+    background: rgb(73, 162, 225);
+    position : absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+
+.skill-tab-link.skill-active-link::after{
+    width : 100%;
+
+}
+
+
+.skill-tab-contents ul {
+
+
+    color: chartreuse;
+    list-style-type: none;
+}
+
+.skill-tab-contents ul li{
+    
+    color: chartreuse;
+    text-decoration: none;
+}
+
+.skill-tab-contents{
+    display : none;
+}
+
+
+.skill-tab-contents.skill-active-tab{
+    display : block;
+}
+
+#experience{
+    text-align: center;
+    align-items: center;
+    padding: 100px 0;
+
+}
+
+
+.experience-head
+{
+    justify-content: center; 
+
+    align-items: center;
+    text-align: center;
+    color: rgb(67, 130, 132);
+}
+
+
+.workexperiences ul {
+    justify-content: center; 
+
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.workexperiences ul li  span{
+    text-align: center;
+    justify-content: center; 
+
+    align-items: center;
+    color: rgb(146, 9, 9);
+    font-size: larger;
+
+}
+
+.workexperiences ul li {
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+    color: rgb(205, 164, 164);
+    font-size: smaller;
+}
+
+#education{
+    text-align: center;
+    align-items: center;
+    padding: 100px 0;
+
+}
+
+
+.education-head
+{
+    align-items: center;
+    text-align: center;
+    color: rgb(146, 156, 87);
+}
+
+
+.schools ul {
+
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.schools ul li  span{
+    text-align: center;
+    align-items: center;
+    color: rgb(220, 116, 154);
+    font-size: larger;
+
+}
+
+.schools ul li {
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+    color: rgb(141, 214, 142);
+    font-size: smaller;
+}
+
+
+
+
+#projects{
+    text-align: center;
+    align-items: center;
+    padding: 100px 0;
+
+}
+
+
+.project-head
+{
+    align-items: center;
+    text-align: center;
+    color: rgb(135, 255, 215);
+}
+
+
+.projects-list ul {
+
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.projects-list ul li  span{
+    text-align: center;
+    align-items: center;
+    color: rgba(172, 188, 255, 0.567);
+    font-size: larger;
+
+}
+
+.projects-list ul li {
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+    color: rgb(214, 174, 141);
+    font-size: smaller;
+}
+
+.projects-list ul li a{
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+    color: rgb(146, 87, 39);
+    font-size: smaller;
+    text-decoration: none;
+}
+
+.projects-list ul li a:hover{
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+    color: rgb(189, 219, 255);
+    font-size: smaller;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .about-head {
+        font-size: 30px;
+    }
+    .profilephoto {
+        width: 100%;  
+        
+    }
+    
+
+    #home,#about,#skills,#experience,#education,#projects, #contact{
+        width: 100%;  
+        height: auto;
+    }
+
+    
+
+    .glow  img{
+        width: 100%;  
+        height: auto;
+    }
+
+    .right-contact form {
+
+        width: 70%; /* Adjust width for medium screens */
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+.contact-head{
+    color: rgb(222, 201, 154);
+}
+
+
+
+#contact {
+    background-color: #000000;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-head {
+    font-size: 36px;
+    font-weight: bold;
+    color: #935b5b;
+    margin-bottom: 30px;
+  }
+  
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  .left-contact, .right-contact {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .left-contact {
+    text-align: left;
+  }
+  
+  .contact-sub-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #d9b77b;
+  }
+  
+  .left-contact a {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .left-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .my-social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #569ec2;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .my-social-icons a i {
+    margin-right: 8px;
+  }
+  
+  .my-social-icons a:hover {
+    color: #0066cc;
+  }
+  
+  .right-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width:500px; /* Set a maximum width */
+
+  }
+  
+  .right-contact input, 
+  .right-contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: rgb(105, 155, 187);
+    border-radius: 5px;
+  }
+  
+  .right-contact button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .right-contact button:hover {
+    background-color: #004a99;
+  }
+  
